@@ -2,238 +2,39 @@
     <h1 class="text-center text-4xl">P R O J E C T S</h1>
 
     <div class="carousel carousel-center max-w-3xl p-4 space-x-96">
-        
-                    <!-- _-_-_-_-_-_-_-_-_-_-_-_-Flipside Factories-_-_-_-_-_-_-_-_-_-_-_-_ -->
-        <div class="carousel-item flex flex-col mx-4 rounded-lg overflow-hidden shadow-lg w-full">
-            
-            <div class="">
-                <img src="assets/FlipsideFactories.png" alt="..." class="w-full h-96">
-            </div>
-
-            <div class="flex flex-col grow relative">
-                <div class="grow pt-1">
-                    <p class="font-medium text-3xl">Flipside Factories</p>
-                    <p class="px-5">Winner of a 24 hour Game Jam hosted by SDU's association for software students, Enigma.</p>
+        @for (project of projects; track $index) {
+            <div class="carousel-item flex flex-col mx-4 rounded-lg overflow-hidden shadow-lg w-full">
+                
+                <div class="">
+                    @if (project.title === "Asteroids") {
+                        <img src="{{ project.imgURL }}" alt="..." class="w-full h-96 object-cover">
+                    } @else {
+                        <img src="{{ project.imgURL }}" alt="..." class="w-full h-96">
+                    }
+                    
                 </div>
-                <div class="flex justify-center pt-2 pb-4 space-x-2">
-                    <img src="assets/CSharp-purple.svg" alt="" class="w-9 h-9">
-                    <img src="assets/Unity.svg" alt="" class="w-9 h-9">
-                </div>
-
-                <div class="absolute left-1 top-1 flex space-x-2 items-end">
-                    <a href="https://github.com/VinciDa33/Enigma-Game-Jam" target="_blank">
-                        <img src="assets/Github.svg" alt="" class="h-8 w-8">
-                    </a>
-                    <a href="https://vincida.itch.io/flipside-factories" target="_blank">
-                        <img src="assets/Itch-Io.svg" alt="" class="h-8 w-16">
-                    </a>
-                </div>
-            </div>
-        </div>
-
-                    <!-- _-_-_-_-_-_-_-_-_-_-_-_-Clicker Game-_-_-_-_-_-_-_-_-_-_-_-_ -->
-        <div class="carousel-item flex flex-col mx-4 rounded-lg overflow-hidden shadow-lg w-full">
-            
-            <div>
-                <img src="assets/ClickerGame.png" alt="..." class="w-full h-96">
-            </div>
-
-            <div class="flex flex-col grow relative">
-                <div class="grow pt-1">
-                    <h1 class="font-medium text-3xl">Clicker Game</h1>
-                    <p class="px-5">A simple incremental clicker game.</p>
-                </div>
-                <div class="flex justify-center pt-2 pb-4 space-x-2 items-end">
-                    <img src="assets/CSharp-purple.svg" alt="" class="w-9 h-9">
-                    <img src="assets/Unity.svg" alt="" class="w-9 h-9">
-                </div>
-
-                <div class="absolute left-1 top-1 flex space-x-2">
-                    <a href="" target="_blank">
-                        <img src="assets/Github.svg" alt="" class="h-8 w-8">
-                    </a>
+                
+                <div class="flex flex-col grow relative">
+                    <div class="grow pt-1">
+                        <h1 class="font-medium text-3xl">{{ project.title }}</h1>
+                        <p class="px-5">{{ project.description }}</p>
+                    </div>
+                    <div class="flex justify-center pt-2 pb-4 space-x-2 items-end">
+                        @for (tech of project.technologies; track $index) {
+                            <img src="{{ tech.iconURL }}" alt="" class="w-fit h-9">
+                        }
+                    </div>
+                
+                    <div class="absolute left-1 top-1 flex space-x-2">
+                        @for (referral of project.referrals; track $index) {
+                            <a href="{{ referral.redirectURL }}" target="_blank">
+                                <img src="{{ referral.imgURL }}" alt="" class="h-8 w-fit">
+                            </a>
+                        }
+                    </div>
                 </div>
             </div>
-        </div>
-
-                    <!-- _-_-_-_-_-_-_-_-_-_-_-_-Asteroids-_-_-_-_-_-_-_-_-_-_-_-_ -->
-        <div class="carousel-item flex flex-col mx-4 rounded-lg overflow-hidden shadow-lg w-full">
-            
-            <div class="">
-                <img src="assets/Asteroids.png" alt="..." class="w-full h-96 object-cover">
-            </div>
-            
-            <div class="flex flex-col grow relative">
-                <div class="grow pt-1">
-                    <h1 class="font-medium text-3xl">Asteroids</h1>
-                    <p class="px-5">A component-based game of Asteroids using JPMS.</p>
-                </div>
-                <div class="flex justify-center pt-2 pb-4 space-x-2 items-end">
-                    <img src="assets/Java.svg" alt="" class="w-9 h-9">
-                    <img src="assets/JavaFX.png" alt="" class="w-20 h-9">
-                    <img src="assets/spring-icon.svg" alt="" class="w-8 h-8">
-                </div>
-            
-                <div class="absolute left-1 top-1 flex space-x-2">
-                    <a href="https://github.com/LasseGH22/AsteroidsFX/tree/LasseMain" target="_blank">
-                        <img src="assets/Github.svg" alt="" class="h-8 w-8">
-                    </a>
-                </div>
-            </div>
-        </div>
-
-                    <!-- _-_-_-_-_-_-_-_-_-_-_-_-API Project-_-_-_-_-_-_-_-_-_-_-_-_ -->
-        <div class="carousel-item flex flex-col mx-4 rounded-lg overflow-hidden shadow-lg w-full">
-            
-            <div class="">
-                <img src="assets/ApiProject.png" alt="..." class="w-full h-96 object-cover">
-            </div>
-            
-            <div class="flex flex-col grow relative">
-                <div class="grow pt-1">
-                    <h1 class="font-medium text-3xl">Bitcoin Tracker</h1>
-                    <p class="px-5">Full stack web application providing real-time and historical data on Bitcoin.</p>
-                </div>
-                <div class="flex justify-center pt-2 pb-4 space-x-2 items-end">
-                    <img src="assets/Java.svg" alt="" class="w-9 h-9">
-                    <img src="assets/spring-icon.svg" alt="" class="w-8 h-8">
-                    <img src="assets/Html.png" alt="" class="w-8 h-8">
-                    <img src="assets/Css.png" alt="" class="w-8 h-8">
-                    <img src="assets/Javascript.svg" alt="" class="w-8 h-8">
-                </div>
-            
-                <div class="absolute left-1 top-1 flex space-x-2">
-                    <a href="https://github.com/LasseGH22/ApiProject" target="_blank">
-                        <img src="assets/Github.svg" alt="" class="h-8 w-8">
-                    </a>
-                </div>
-            </div>
-        </div>
-
-                    <!-- _-_-_-_-_-_-_-_-_-_-_-_-Sempro 4-_-_-_-_-_-_-_-_-_-_-_-_ -->
-        <div class="carousel-item flex flex-col mx-4 rounded-lg overflow-hidden shadow-lg w-full">
-            
-            <div class="">
-                <img src="assets/Asteroids.png" alt="..." class="w-full h-96 object-cover">
-            </div>
-            
-            <div class="flex flex-col grow relative">
-                <div class="grow pt-1">
-                    <h1 class="font-medium text-3xl">Full-stack Assembly Line Manager</h1>
-                    <p class="px-5">Full-stack management of an assembly line with multiple communication protocols</p>
-                </div>
-                <div class="flex justify-center pt-2 pb-4 space-x-2 items-end">
-                    <img src="assets/Java.svg" alt="" class="w-9 h-9">
-                    <img src="assets/JavaFX.png" alt="" class="w-20 h-9">
-                </div>
-            
-                <div class="absolute left-1 top-1 flex space-x-2">
-                    <a href="https://github.com/VinciDa33/Enigma-Game-Jam" target="_blank">
-                        <img src="assets/Github.svg" alt="" class="h-8 w-8">
-                    </a>
-                </div>
-            </div>
-        </div>
-
-                    <!-- _-_-_-_-_-_-_-_-_-_-_-_-Sempro 3-_-_-_-_-_-_-_-_-_-_-_-_ -->
-        <div class="carousel-item flex flex-col mx-4 rounded-lg overflow-hidden shadow-lg w-full">
-            
-            <div class="">
-                <img src="assets/Asteroids.png" alt="..." class="w-full h-96 object-cover">
-            </div>
-            
-            <div class="flex flex-col grow relative">
-                <div class="grow pt-1">
-                    <h1 class="font-medium text-3xl">Clicker Game</h1>
-                    <p class="px-5">A simple incremental clicker game</p>
-                </div>
-                <div class="flex justify-center pt-2 pb-4 space-x-2 items-end">
-                    <img src="assets/Java.svg" alt="" class="w-9 h-9">
-                    <img src="assets/JavaFX.png" alt="" class="w-20 h-9">
-                </div>
-            
-                <div class="absolute left-1 top-1 flex space-x-2">
-                    <a href="https://github.com/VinciDa33/Enigma-Game-Jam" target="_blank">
-                        <img src="assets/Github.svg" alt="" class="h-8 w-8">
-                    </a>
-                </div>
-            </div>
-        </div>
-
-                    <!-- _-_-_-_-_-_-_-_-_-_-_-_-Sempro 2-_-_-_-_-_-_-_-_-_-_-_-_ -->
-        <div class="carousel-item flex flex-col mx-4 rounded-lg overflow-hidden shadow-lg w-full">
-            
-            <div class="">
-                <img src="assets/Asteroids.png" alt="..." class="w-full h-96 object-cover">
-            </div>
-            
-            <div class="flex flex-col grow relative">
-                <div class="grow pt-1">
-                    <h1 class="font-medium text-3xl">Clicker Game</h1>
-                    <p class="px-5">A simple incremental clicker game</p>
-                </div>
-                <div class="flex justify-center pt-2 pb-4 space-x-2 items-end">
-                    <img src="assets/Java.svg" alt="" class="w-9 h-9">
-                    <img src="assets/JavaFX.png" alt="" class="w-20 h-9">
-                </div>
-            
-                <div class="absolute left-1 top-1 flex space-x-2">
-                    <a href="https://github.com/VinciDa33/Enigma-Game-Jam" target="_blank">
-                        <img src="assets/Github.svg" alt="" class="h-8 w-8">
-                    </a>
-                </div>
-            </div>
-        </div>
-
-                    <!-- _-_-_-_-_-_-_-_-_-_-_-_-Sempro 1-_-_-_-_-_-_-_-_-_-_-_-_ -->
-        <div class="carousel-item flex flex-col mx-4 rounded-lg overflow-hidden shadow-lg w-full">
-            
-            <div class="">
-                <img src="assets/Asteroids.png" alt="..." class="w-full h-96 object-cover">
-            </div>
-            
-            <div class="flex flex-col grow relative">
-                <div class="grow pt-1">
-                    <h1 class="font-medium text-3xl">Clicker Game</h1>
-                    <p class="px-5">A simple incremental clicker game</p>
-                </div>
-                <div class="flex justify-center pt-2 pb-4 space-x-2 items-end">
-                    <img src="assets/Java.svg" alt="" class="w-9 h-9">
-                    <img src="assets/JavaFX.png" alt="" class="w-20 h-9">
-                </div>
-            
-                <div class="absolute left-1 top-1 flex space-x-2">
-                    <a href="https://github.com/VinciDa33/Enigma-Game-Jam" target="_blank">
-                        <img src="assets/Github.svg" alt="" class="h-8 w-8">
-                    </a>
-                </div>
-            </div>
-        </div>
-
-
-        <div class="carousel-item flex flex-col mx-4 rounded-lg overflow-hidden shadow-lg w-full">
-            
-            <div class="">
-                <img src="assets/Asteroids.png" alt="..." class="w-full h-96 object-cover">
-            </div>
-            
-            <div class="flex flex-col grow relative">
-                <div class="grow pt-1">
-                    <h1 class="font-medium text-3xl">Clicker Game</h1>
-                    <p class="px-5">A simple incremental clicker game</p>
-                </div>
-                <div class="flex justify-center pt-2 pb-4 space-x-2 items-end">
-                    <img src="assets/Java.svg" alt="" class="w-9 h-9">
-                    <img src="assets/JavaFX.png" alt="" class="w-20 h-9">
-                </div>
-            
-                <div class="absolute left-1 top-1 flex space-x-2">
-                    <a href="https://github.com/VinciDa33/Enigma-Game-Jam" target="_blank">
-                        <img src="assets/Github.svg" alt="" class="h-8 w-8">
-                    </a>
-                </div>
-            </div>
-        </div>
+        }
 
     </div>
 </div>

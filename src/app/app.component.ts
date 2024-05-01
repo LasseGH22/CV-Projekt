@@ -13,4 +13,5 @@ import { ProjectsComponent } from './projects/projects.component';
 })
 export class AppComponent {
   title = 'CV-Projekt';
+
 }
