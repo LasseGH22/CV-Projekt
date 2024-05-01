@@ -1,9 +1,9 @@
 <div class="font-[abel] text-center">
     <h1 class="text-center text-4xl">P R O J E C T S</h1>
 
-    <div class="carousel carousel-center max-w-3xl p-4 space-x-96">
+    <div class="carousel carousel-center max-w-full pt-2 pb-9 px-6">
         @for (project of projects; track $index) {
-            <div class="carousel-item flex flex-col mx-4 rounded-lg overflow-hidden shadow-lg w-full">
+            <div class="carousel-item flex flex-col mx-[35rem] rounded-lg overflow-hidden shadow-xl shadow-neutral-300 w-full max-w-3xl">
                 
                 <div class="">
                     @if (project.title === "Asteroids") {
@@ -14,7 +14,7 @@
                     
                 </div>
                 
-                <div class="flex flex-col grow relative">
+                <div class="flex flex-col grow relative bg-neutral-50">
                     <div class="grow pt-1">
                         <h1 class="font-medium text-3xl">{{ project.title }}</h1>
                         <p class="px-5">{{ project.description }}</p>
