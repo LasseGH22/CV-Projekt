@@ -3,7 +3,7 @@
 
     <div class="carousel carousel-center max-w-full pt-2 pb-9 px-6">
         @for (project of projects; track $index) {
-            <div class="carousel-item flex flex-col mx-[35rem] rounded-lg overflow-hidden shadow-xl shadow-neutral-300 w-full max-w-3xl">
+            <div class="carousel-item flex flex-col mx-[35rem] rounded-lg overflow-hidden shadow-xl bg-neutral-50 shadow-neutral-300 w-full max-w-3xl">
                 
                 <div class="">
                     @if (project.title === "Asteroids") {
@@ -14,27 +14,77 @@
                     
                 </div>
                 
-                <div class="flex flex-col grow relative bg-neutral-50">
+                <div class="flex flex-col grow relative">
                     <div class="grow pt-1">
                         <h1 class="font-medium text-3xl">{{ project.title }}</h1>
                         <p class="px-5">{{ project.description }}</p>
                     </div>
-                    <div class="flex justify-center pt-2 pb-4 space-x-2 items-end">
-                        @for (tech of project.technologies; track $index) {
-                            <img src="{{ tech.iconURL }}" alt="" class="w-fit h-9">
-                        }
-                    </div>
                 
-                    <div class="absolute left-1 top-1 flex space-x-2">
+                    <div class="absolute left-2 top-2 flex space-x-2">
                         @for (referral of project.referrals; track $index) {
                             <a href="{{ referral.redirectURL }}" target="_blank">
-                                <img src="{{ referral.imgURL }}" alt="" class="h-8 w-fit">
+                                <img src="{{ referral.imgURL }}" alt="" class="h-8 w-fit hover:scale-125 transition-transform">
                             </a>
                         }
                     </div>
                 </div>
+
+                <div class="py-3 max-w-full">
+                    <button class="btn btn-sm text-lg w-[50%]" (click)= "openModal(project.index)">View More</button>
+                </div>
+                
+                <dialog id="modal_{{ project.index }}" class="modal">
+                    <div class="modal-box">
+                        <form method="dialog">
+                            <button class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
+                        </form>
+                        <div class="grid grid-cols-3 gap-4 py-4">
+                            <div class="col-span-2">
+                                <p class="">{{ project.longDescription }}</p>
+                            </div>
+                            <div class="text-start space-y-2">
+                                <div>
+                                    <p class="font-semibold">Origin</p>
+                                    <p>{{ project.origin.origin }}</p>
+                                </div>
+
+                                @if (project.origin.accomplishment) {
+                                    <div>
+                                        <p class="font-semibold">Accomplishment</p>
+                                        <p>{{ project.origin.accomplishment }}</p>
+                                    </div>
+                                }
+                                
+                                @if (project.origin.origin === "University") {
+                                    <div>
+                                        <p class="font-semibold">Subject</p>
+                                        <p>{{ project.origin.subject }}</p>
+                                    </div>
+                                    
+                                    <div>
+                                        <p class="font-semibold">Grade</p>
+                                        <p>{{ project.origin.grade }}</p>
+                                    </div>
+                                }
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <h1 class="font-style: italic font-semibold">Technologies</h1>
+                            <div class="flex justify-center pb-4 pt-2 space-x-2 items-end">
+                                @for (tech of project.technologies; track $index) {
+                                    <div class="tooltip tooltip-bottom custom-tooltip" [attr.data-tip]="tech.altText">
+                                        <img src="{{ tech.iconURL }}" alt="" class="w-fit h-9 hover:scale-125 transition-transform">
+                                    </div>
+                                }
+                            </div>
+                        </div>
+                    </div>
+                </dialog>
             </div>
+            
         }
 
     </div>
 </div>
+
