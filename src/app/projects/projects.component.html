@@ -1,10 +1,15 @@
 <div class="font-[abel] text-center">
-    <h1 class="text-center text-4xl">P R O J E C T S</h1>
+    <div class="flex justify-center relative">
+        <h1 class="text-center text-4xl">P R O J E C T S</h1>
+        <div class="flex justify-between absolute w-[25%] top-2">
+            <kbd class="kbd">◀︎</kbd>
+            <kbd class="kbd">▶︎</kbd>
+        </div>
+    </div>
 
-    <div class="carousel carousel-center max-w-full pt-2 pb-9 px-6">
+    <div class="carousel carousel-center max-w-full pt-2 pb-9 px-6 relative">
         @for (project of projects; track $index) {
-            <div class="carousel-item flex flex-col mx-[35rem] rounded-lg overflow-hidden shadow-xl bg-neutral-50 shadow-neutral-300 w-full max-w-3xl">
-                
+            <div class="carousel-item flex flex-col mx-[35rem] rounded-lg overflow-hidden shadow-xl bg-neutral-50 shadow-neutral-300 w-full max-w-3xl relative">
                 <div class="">
                     @if (project.title === "Asteroids") {
                         <img src="{{ project.imgURL }}" alt="..." class="w-full h-96 object-cover">

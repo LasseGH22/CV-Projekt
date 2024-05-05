@@ -164,7 +164,8 @@ export class ProjectsComponent {
         this.technologies[3],
         this.technologies[5],
         this.technologies[8],
-        this.technologies[14]
+        this.technologies[14],
+        this.technologies[12]
       ], 
       referrals: [
         {name: "Github", imgURL: this.technologies[15].iconURL, redirectURL: "https://github.com/BeerBrewersSem3/SEMPRO3"},
