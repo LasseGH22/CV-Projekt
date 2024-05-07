@@ -3,4 +3,5 @@ export interface Technologies {
     name: string;
     iconURL: string;
     altText: string;
+    type?: string;
 }

@@ -21,7 +21,7 @@ export class TechnologiesService {
 
     {index: 11, name: "unity", iconURL: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/unity/unity-original.svg", altText: "Unity"},
     {index: 12, name: "docker", iconURL: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg", altText: "Docker"},
-    {index: 13, name: "sql", iconURL: "assets/database-icon.svg", altText: "SQL"},
+    {index: 13, name: "sql", iconURL: "assets/sql.png", altText: "SQL"},
     {index: 14, name: "postgresql", iconURL: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg", altText: "PostgreSQL"},
 
     {index: 15, name: "github", iconURL: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg", altText: "Github"},
