@@ -1,11 +1,11 @@
 <div class="flex flex-col items-center justify-center w-full h-screen font-[abel]">
-    <section class="w-[50%] flex space-x-12 items-center">
+    <section class="w-[50%] flex space-x-20 items-center">
         <div class="avatar">
-            <div class="w-64 rounded-full border border-black">
-                <img src="assets/MigSelv.png" />
+            <div class="w-72 rounded-full drop-shadow-2xl">
+                <img src="assets/MigCV.JPG" />
             </div>
         </div>
-        <div class="">
+        <div class="space-y-3">
             <div>
                 <div class="text-4.5xl">
                     <div class="flex flex-row justify-center">
@@ -18,18 +18,15 @@
                     <p class="text-lg">Software Engineer</p>
                 </div>
             </div>
-            <h1 class="font-semibold text-3xl">Hello!</h1>
-            <p class="">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In finibus tincidunt libero, nec auctor ex sodales sed. Nunc quis lorem elit. In hac habitasse platea dictumst. Duis venenatis mattis sapien, et ultricies urna maximus ut. Aenean a auctor lacus, nec hendrerit purus. Aenean facilisis, nibh eget placerat dapibus, neque diam aliquet massa, at mollis lorem odio id tortor.</p>
+            <p class="text-base"><span class="font-semibold text-xl">Hello!</span> Im Lasse, currently enrolled as a BEng. Software Engineering student at the University of Southern Denmark, Odense. I started my software journey in high school where i, because of interests, studied a "HTX degree" specialized in It and Software. This sparked my interest for software further and made me pursue it as my carrer. Throughout my education on software different projects have had me exploring many different languages, frameworks and tools. Making me able to handle frontend and backend.</p>
         </div>
     </section>
     <div class="divider divider-vertical w-[75%] self-auto py-8"></div>
-    <section class="flex justify-between w-[80%]">
-        <div class="flex flex-col justify-center">
-            <p class="text-3xl">TEXT TEXT TEXT</p>
-        </div>
+    <section class="flex flex-col items-center justify-center w-[80%] space-y-8">
+        <div></div>
         <div class="grid grid-col-3">
-            <div class="flex justify-center relative py-4">
-                <div class="flex space-x-14 justify-center absolute top-1">
+            <div class="flex justify-center relative">
+                <div class="flex space-x-14 justify-center absolute -top-6">
                     @for (language of languages; track $index) {
                         <div>
                             <img src="{{ language.iconURL }}" alt="{{ language.altText }}" title="{{ language.name }}" class="h-14 w-fit">
@@ -46,11 +43,11 @@
                 }
             </div>
 
-            <div class="flex justify-center relative py-4">
+            <div class="flex justify-center relative">
                 <div class="flex space-x-14 justify-center absolute -top-6">
                     @for (tool of tools; track $index) {
-                        <div class="h-">
-                            <img src="{{ tool.iconURL }}" alt="{{ tool.altText }}" title="{{ tool.name }}" class="h-14 w-fit object-cover">
+                        <div>
+                            <img src="{{ tool.iconURL }}" alt="{{ tool.altText }}" title="{{ tool.name }}" class="h-14 w-fit">
                         </div>
                     }
                 </div>

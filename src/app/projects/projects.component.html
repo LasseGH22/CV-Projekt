@@ -10,7 +10,7 @@
     <div class="carousel carousel-center max-w-full pt-2 pb-9 px-6 relative">
         @for (project of projects; track $index) {
             <div class="carousel-item flex flex-col mx-[35rem] rounded-lg overflow-hidden shadow-xl bg-neutral-50 shadow-neutral-300 w-full max-w-3xl relative">
-                <div class="">
+                <div>
                     @if (project.title === "Asteroids") {
                         <img src="{{ project.imgURL }}" alt="..." class="w-full h-96 object-cover">
                     } @else {
@@ -87,9 +87,7 @@
                     </div>
                 </dialog>
             </div>
-            
         }
-
     </div>
 </div>
 

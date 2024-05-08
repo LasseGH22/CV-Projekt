@@ -39,7 +39,8 @@ export class ProjectsComponent implements OnInit {
         longDescription: "The game is a top down factory builder with its twist being spatial anomalies. The objective is to craft certain items in order to unlock new levels and eventually escape. The player has to utilize the spatial anomalies to move materials around.", 
         technologies: [
           this.technologies[1],
-          this.technologies[11]
+          this.technologies[11],
+          this.technologies[20]
         ], 
         referrals: [
           {name: "Github", imgURL: this.technologies[15].iconURL, redirectURL: "https://github.com/VinciDa33/Enigma-Game-Jam"},
@@ -71,7 +72,8 @@ export class ProjectsComponent implements OnInit {
         technologies: [
           this.technologies[0],
           this.technologies[7],
-          this.technologies[8]
+          this.technologies[8],
+          this.technologies[20]
         ], 
         referrals: [
           {name: "Github", imgURL: this.technologies[15].iconURL, redirectURL: "https://github.com/LasseGH22/AsteroidsFX/tree/LasseMain"},
@@ -90,7 +92,8 @@ export class ProjectsComponent implements OnInit {
           this.technologies[3],
           this.technologies[5],
           this.technologies[8],
-          this.technologies[13]
+          this.technologies[13],
+          this.technologies[20]
         ], 
         referrals: [
           {name: "Github", imgURL: this.technologies[15].iconURL, redirectURL: "https://github.com/LasseGH22/ApiProject"},
@@ -110,7 +113,8 @@ export class ProjectsComponent implements OnInit {
           this.technologies[6],
           this.technologies[8],
           this.technologies[9],
-          this.technologies[13]
+          this.technologies[13],
+          this.technologies[20]
         ], 
         referrals: [
           {name: "Github", imgURL: this.technologies[15].iconURL, redirectURL: "https://github.com/DroneDudes/SEMPRO4"},
@@ -129,7 +133,8 @@ export class ProjectsComponent implements OnInit {
           this.technologies[3],
           this.technologies[5],
           this.technologies[10],
-          this.technologies[19]
+          this.technologies[19],
+          this.technologies[20]
         ], 
         referrals: [
           {name: "Github", imgURL: this.technologies[15].iconURL, redirectURL: "https://github.com/msundby/Level-Up-Library-Webtechnologies-SDU"},
@@ -149,7 +154,8 @@ export class ProjectsComponent implements OnInit {
           this.technologies[5],
           this.technologies[8],
           this.technologies[14],
-          this.technologies[12]
+          this.technologies[12],
+          this.technologies[20]
         ], 
         referrals: [
           {name: "Github", imgURL: this.technologies[15].iconURL, redirectURL: "https://github.com/BeerBrewersSem3/SEMPRO3"},
@@ -163,7 +169,7 @@ export class ProjectsComponent implements OnInit {
         description: "Shop module for a shared e-commerce platform.",
         longDescription: "???", 
         technologies: [
-          
+          this.technologies[20]
         ], 
         referrals: [
           {name: "Github", imgURL: this.technologies[15].iconURL, redirectURL: ""},
@@ -177,7 +183,7 @@ export class ProjectsComponent implements OnInit {
         description: "SEMPRO1",
         longDescription: "???", 
         technologies: [
-          
+          this.technologies[20]
         ], 
         referrals: [
           {name: "Github", imgURL: this.technologies[15].iconURL, redirectURL: ""},
@@ -194,7 +200,8 @@ export class ProjectsComponent implements OnInit {
           this.technologies[2],
           this.technologies[4],
           this.technologies[6],
-          this.technologies[9]
+          this.technologies[9],
+          this.technologies[20]
         ], 
         referrals: [
           {name: "Github", imgURL: this.technologies[15].iconURL, redirectURL: ""},

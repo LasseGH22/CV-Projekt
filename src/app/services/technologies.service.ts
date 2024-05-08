@@ -30,6 +30,7 @@ export class TechnologiesService {
 
     {index: 18, name: "php", iconURL: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/php/php-plain.svg", altText: "PHP"},
     {index: 19, name: "supabase", iconURL: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/supabase/supabase-original.svg", altText: "Supabase"},
+    {index: 20, name: "git", iconURL: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg", altText: "Git"},
   ];
 
   constructor() { }
