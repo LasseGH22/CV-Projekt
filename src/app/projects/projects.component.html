@@ -1,93 +1,94 @@
-<div class="font-[abel] text-center bg-gradient-to-r from-slate-300 via-white to-slate-300 py-16">
-    <div class="flex justify-center relative">
-        <h1 class="text-center text-4xl">P R O J E C T S</h1>
-        <div class="flex justify-between absolute w-[25%] top-2">
-            <kbd class="kbd">◀︎</kbd>
-            <kbd class="kbd">▶︎</kbd>
+<div class="font-[abel] w-full h-screen flex justify-center items-center">
+    <div class="h-fit w-[80%] py-16 bg-gradient-to-r from-slate-200 via-white to-slate-200 text-center rounded-2xl shadow-xl">
+        <div class="flex justify-center relative">
+            <h1 class="text-center text-4xl">P R O J E C T S</h1>
+            <div class="flex justify-between absolute w-[25%] top-2">
+                <kbd class="kbd">◀︎</kbd>
+                <kbd class="kbd">▶︎</kbd>
+            </div>
         </div>
-    </div>
-
-    <div class="carousel carousel-center max-w-full pt-2 pb-9 px-6 relative">
-        @for (project of projects; track $index) {
-            <div class="carousel-item flex flex-col mx-[35rem] rounded-lg overflow-hidden shadow-xl bg-neutral-50 shadow-neutral-300 w-full max-w-3xl relative">
-                <div>
-                    @if (project.title === "Asteroids") {
-                        <img src="{{ project.imgURL }}" alt="..." class="w-full h-96 object-cover">
-                    } @else {
-                        <img src="{{ project.imgURL }}" alt="..." class="w-full h-96">
-                    }
-                    
-                </div>
-                
-                <div class="flex flex-col grow relative">
-                    <div class="grow pt-1">
-                        <h1 class="font-medium text-3xl">{{ project.title }}</h1>
-                        <p class="px-5">{{ project.description }}</p>
-                    </div>
-                
-                    <div class="absolute left-2 top-2 flex space-x-2">
-                        @for (referral of project.referrals; track $index) {
-                            <a href="{{ referral.redirectURL }}" target="_blank">
-                                <img src="{{ referral.imgURL }}" alt="" class="h-8 w-fit hover:scale-125 transition-transform">
-                            </a>
+    
+        <div class="carousel carousel-center max-w-full pt-2 pb-9 px-6 relative">
+            @for (project of projects; track $index) {
+                <div class="carousel-item flex flex-col mx-[35rem] rounded-lg overflow-hidden shadow-xl bg-neutral-50 shadow-neutral-300 w-full max-w-3xl relative">
+                    <div>
+                        @if (project.title === "Asteroids") {
+                            <img src="{{ project.imgURL }}" alt="..." class="w-full h-96 object-cover">
+                        } @else {
+                            <img src="{{ project.imgURL }}" alt="..." class="w-full h-96">
                         }
                     </div>
-                </div>
-
-                <div class="py-3 max-w-full">
-                    <button class="btn btn-sm text-lg w-[50%]" (click)= "openModal(project.index)">View More</button>
-                </div>
-                
-                <dialog id="modal_{{ project.index }}" class="modal">
-                    <div class="modal-box">
-                        <form method="dialog">
-                            <button class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
-                        </form>
-                        <div class="grid grid-cols-3 gap-4 py-4">
-                            <div class="col-span-2">
-                                <p class="">{{ project.longDescription }}</p>
-                            </div>
-                            <div class="text-start space-y-2">
-                                <div>
-                                    <p class="font-semibold">Origin</p>
-                                    <p>{{ project.origin.origin }}</p>
-                                </div>
-
-                                @if (project.origin.accomplishment) {
-                                    <div>
-                                        <p class="font-semibold">Accomplishment</p>
-                                        <p>{{ project.origin.accomplishment }}</p>
-                                    </div>
-                                }
-                                
-                                @if (project.origin.origin === "University") {
-                                    <div>
-                                        <p class="font-semibold">Subject</p>
-                                        <p>{{ project.origin.subject }}</p>
-                                    </div>
-                                    
-                                    <div>
-                                        <p class="font-semibold">Grade</p>
-                                        <p>{{ project.origin.grade }}</p>
-                                    </div>
-                                }
-                            </div>
+                    
+                    <div class="flex flex-col grow relative">
+                        <div class="grow pt-1">
+                            <h1 class="font-medium text-3xl">{{ project.title }}</h1>
+                            <p class="px-5">{{ project.description }}</p>
                         </div>
-                        
-                        <div>
-                            <h1 class="font-style: italic font-semibold">Technologies</h1>
-                            <div class="flex justify-center pb-4 pt-2 space-x-2 items-end">
-                                @for (tech of project.technologies; track $index) {
-                                    <div class="tooltip tooltip-bottom custom-tooltip" [attr.data-tip]="tech.altText">
-                                        <img src="{{ tech.iconURL }}" alt="" class="w-fit h-9 hover:scale-125 transition-transform">
-                                    </div>
-                                }
-                            </div>
+                    
+                        <div class="absolute left-2 top-2 flex space-x-2">
+                            @for (referral of project.referrals; track $index) {
+                                <a href="{{ referral.redirectURL }}" target="_blank">
+                                    <img src="{{ referral.imgURL }}" alt="" class="h-8 w-fit hover:scale-125 transition-transform">
+                                </a>
+                            }
                         </div>
                     </div>
-                </dialog>
-            </div>
-        }
+    
+                    <div class="py-3 max-w-full">
+                        <button class="btn btn-sm text-lg w-[50%]" (click)= "openModal(project.index)">View More</button>
+                    </div>
+                    
+                    <dialog id="modal_{{ project.index }}" class="modal">
+                        <div class="modal-box">
+                            <form method="dialog">
+                                <button class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
+                            </form>
+                            <div class="grid grid-cols-3 gap-4 py-4">
+                                <div class="col-span-2">
+                                    <p class="">{{ project.longDescription }}</p>
+                                </div>
+                                <div class="text-start space-y-2">
+                                    <div>
+                                        <p class="font-semibold">Origin</p>
+                                        <p>{{ project.origin.origin }}</p>
+                                    </div>
+    
+                                    @if (project.origin.accomplishment) {
+                                        <div>
+                                            <p class="font-semibold">Accomplishment</p>
+                                            <p>{{ project.origin.accomplishment }}</p>
+                                        </div>
+                                    }
+                                    
+                                    @if (project.origin.origin === "University") {
+                                        <div>
+                                            <p class="font-semibold">Subject</p>
+                                            <p>{{ project.origin.subject }}</p>
+                                        </div>
+                                        
+                                        <div>
+                                            <p class="font-semibold">Grade</p>
+                                            <p>{{ project.origin.grade }}</p>
+                                        </div>
+                                    }
+                                </div>
+                            </div>
+                            
+                            <div>
+                                <h1 class="font-style: italic font-semibold">Technologies</h1>
+                                <div class="flex justify-center pb-4 pt-2 space-x-2 items-end">
+                                    @for (tech of project.technologies; track $index) {
+                                        <div class="tooltip tooltip-bottom custom-tooltip" [attr.data-tip]="tech.altText">
+                                            <img src="{{ tech.iconURL }}" alt="" class="w-fit h-9 hover:scale-125 transition-transform">
+                                        </div>
+                                    }
+                                </div>
+                            </div>
+                        </div>
+                    </dialog>
+                </div>
+            }
+        </div>
     </div>
 </div>
 

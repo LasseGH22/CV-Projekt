@@ -1,5 +1,5 @@
 import { RouterModule, Routes } from '@angular/router';
-import { AboutComponent } from './about/about.component';
+import { IntroComponent } from './intro/intro.component';
 
 
 export const routes: Routes = [];
