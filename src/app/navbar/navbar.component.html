@@ -1,12 +1,14 @@
 <body class="font-[abel] bg-base-100 fixed w-full top-0 py-3 z-50 shadow-md">
     <div class="absolute left-12 -top-3">
-        <p class="text-6xl font-[sedan]">H</p>
+        <button (click)="scrollToElement('intro')">
+            <p class="text-6xl font-[sedan]">H</p>
+        </button>
     </div>
 
      <div class="text-center">
-        <button class="btn btn-ghost text-base">.a b o u t ( )</button>
-        <button class="btn btn-ghost text-base">.p r o j e c t s ( )</button>
-        <button class="btn btn-ghost text-base">.c o n t a c t ( )</button>
+        <button class="btn btn-ghost text-base" (click)="scrollToElement('projects')">.p r o j e c t s ( )</button>
+        <button class="btn btn-ghost text-base" (click)="scrollToElement('about')">.a b o u t ( )</button>
+        <button class="btn btn-ghost text-base" (click)="scrollToElement('contact')">.c o n t a c t ( )</button>
     </div>
 
     <div class="flex mr-4 space-x-2 absolute right-2 top-2">
