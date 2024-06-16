@@ -22,7 +22,7 @@ export class IntroComponent {
   public frameworks: Technologies[] = [
     {index: 7, name: "tailwind", iconURL: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-plain-wordmark.svg", altText: "Tailwind CSS", type: "framework"},
     {index: 9, name: "javaSpring", iconURL: "assets/Spring-wordmark.svg", altText: "Spring Boot", type: "framework"},
-    {index: 10, name: "angular", iconURL: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/angularjs/angularjs-original-wordmark.svg", altText: "Angular", type: "framework"},
+    {index: 10, name: "angular", iconURL: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/angular/angular-plain-wordmark.svg", altText: "Angular", type: "framework"},
     {index: 11, name: "laravel", iconURL: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/laravel/laravel-line-wordmark.svg", altText: "Laravel", type: "framework"},
     {index: 12, name: "unity", iconURL: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/unity/unity-original-wordmark.svg", altText: "Unity", type: "framework"},
   ];
