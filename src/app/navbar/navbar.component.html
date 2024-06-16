@@ -1,22 +1,33 @@
-<body class="font-[abel] bg-base-100 fixed w-full top-0 py-3 z-50 shadow-md">
-    <div class="absolute left-12 -top-3">
+<body class="font-[abel] bg-base-100 fixed w-full top-0 py-3 z-50 shadow-md flex justify-between h-14
+    lg:h-16
+">
+    <div class="flex flex-col justify-center ml-4">
         <button (click)="scrollToElement('intro')">
-            <p class="text-6xl font-[sedan]">H</p>
+            <p class="text-5xl font-[sedan]
+                lg:text-5xl
+                2xl:text-6xl
+            ">H</p>
         </button>
     </div>
 
-     <div class="text-center">
-        <button class="btn btn-ghost text-base" (click)="scrollToElement('projects')">.p r o j e c t s ( )</button>
-        <button class="btn btn-ghost text-base" (click)="scrollToElement('about')">.a b o u t ( )</button>
-        <button class="btn btn-ghost text-base" (click)="scrollToElement('contact')">.c o n t a c t ( )</button>
+     <div class="flex items-center">
+        <button class="btn btn-ghost text-sm lg:text-base" (click)="scrollToElement('projects')">.p r o j e c t s ( )</button>
+        <button class="btn btn-ghost text-sm lg:text-base" (click)="scrollToElement('about')">.a b o u t ( )</button>
+        <button class="btn btn-ghost text-sm lg:text-base" (click)="scrollToElement('contact')">.c o n t a c t ( )</button>
     </div>
 
-    <div class="flex mr-4 space-x-2 absolute right-2 top-2">
+    <div class="flex items-center space-x-2 mr-4">
         <a href="https://github.com/LasseGH22" target="_blank">
-            <img src="assets/Github.svg" alt="Github Icon" class="h-14 w-14 hover:scale-125 transition-transform">
+            <img src="assets/Github.svg" alt="Github Icon" class="hover:scale-125 transition-transform h-8 w-8
+                md:h-9 md:w-9
+                lg:h-10 lg:w-10
+            ">
         </a>
         <a href="https://www.linkedin.com/in/lasse-hvilsted-7b4430152/" target="_blank">
-            <img src="assets/LinkedIn.svg" alt="" class="h-14 w-14 hover:scale-125 transition-transform">
+            <img src="assets/LinkedIn.svg" alt="" class="hover:scale-125 transition-transform h-8 w-8 
+                md:h-9 md:w-9
+                lg:h-10 lg:w-10
+            ">
         </a>
     </div>
 </body>
