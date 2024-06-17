@@ -1,38 +1,44 @@
-<div id="about" class="font-[abel] w-full h-screen flex flex-col justify-center items-center">
-    <div class="text-center flex justify-center space-x-4 text-3xl">
-        <p>A B O U T</p> 
-        <p>M E</p>
+<div id="about" class="font-[abel] w-full h-fit flex flex-col justify-center items-center">
+    <div class="text-center flex justify-center space-x-6 text-3xl">
+        <p>M Y</p> 
+        <p>S O F T W A R E</p>
+        <p>J O U R N E Y</p>
     </div>
-    <div>
-        <ul class="timeline timeline-snap-icon max-md:timeline-compact timeline-vertical">
-            <li>
-                <div class="timeline-middle w-16 h-16 bg-[#c31414] flex items-center rounded-full"> <img src="assets/superbrugsen1.png" alt="SuperBrugsen" class="scale-90"> </div>
-                <div class="timeline-start md:text-end mb-10">
-                    <time class="font-mono italic">Nov 2017 - Jun 2022</time>
-                    <div class="text-lg font-black">SuperBrugsen</div>
-
-                </div>
-                <hr/>
-            </li>
-            <li>
-                <hr/>
-                <div class="timeline-middle w-16 h-16"> <img src="assets/htx.jpeg" alt="" class="rounded-full"></div>
-                <div class="timeline-end mb-10">
-                    <time class="font-mono italic">Aug 2018 - Jun 2021</time>
-                    <div class="text-lg font-black">Higher Technical Exam</div>
-
-                </div>
-                <hr/>
-            </li>
-            <li>
-                <hr/>
-                <div class="timeline-middle w-16 h-16 flex items-center rounded-full border-2 border-slate-500"> <img src="assets/sdu.png" alt="" class="scale-90"> </div>
-                <div class="timeline-start md:text-end mb-10">
-                    <time class="font-mono italic">Sep 2022 - Ongoing</time>
-                    <div class="text-lg font-black">BEng Software Technology degree</div>
-
-                </div>
-            </li>
+    <div class="w-[90%]">
+        <ul class="timeline timeline-snap-icon timeline-vertical">
+            @for (entry of TimelineEntries; track $index) {
+                <li>
+                    @if (entry.index > 0) {
+                        <hr>
+                    }
+                    <div class="timeline-middle bg-slate-400 w-4 h-4 rounded-full @if"></div>
+                    
+                    @if (entry.index % 2 === 0) {
+                        <div class="timeline-start text-end"> 
+                            <div class="flex space-x-3 justify-end">
+                                @for (title of entry.title; track $index) {
+                                    <p>{{ title }}</p>
+                                }
+                            </div>
+                            <p class="text-justify"> {{ entry.description }}</p>
+                        </div>
+                    } @else {
+                        <div class="timeline-end"> 
+                            <div class="flex space-x-3">
+                                @for (title of entry.title; track $index) {
+                                    <p>{{ title }}</p>
+                                }
+                            </div>
+                            <p class="text-justify"> {{ entry.description }}</p>
+                        </div>
+                    }
+                    @if (entry.index < TimelineEntries.length - 1) {
+                        <hr>
+                    }
+                    
+                </li>
+            }
+            
         </ul>
     </div>
 </div>
