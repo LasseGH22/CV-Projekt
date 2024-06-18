@@ -1,25 +1,24 @@
-<div class="font-[abel] w-full h-fit flex justify-center items-center relative mb-48">
-    <div id="projects" class="absolute -top-48"></div>
+<div class="font-[abel] w-full h-fit flex justify-center items-center relative mb-48
+    md:mb-32 md:mt-12
+">
+    <div id="projects" class="absolute -top-48
+        lg:-top-40
+        xl:-top-32
+        2xl:-top-36
+    "></div>
     <div class="py-4 bg-gradient-to-r from-slate-200 via-white to-slate-200 text-center rounded-2xl shadow-xl h-fit w-[90%] 
         md:w-[85%]
         lg:w-[80%]
     ">
-        
         <div class="flex justify-center">
             <h1 class="text-center relative flex justify-center text-3xl
-            lg:text-4xl
-            2xl:text-5xl
+                lg:text-4xl
             ">P R O J E C T S
                 <span class="flex justify-between absolute w-[175%] top-1
                     lg:top-2
-                    2xl:top-3 2xl:w-[200%]
                 ">
-                    <kbd class="kbd kbd-md
-                        2xl:kbd-lg
-                    ">◀︎</kbd>
-                    <kbd class="kbd kbd-md
-                        2xl:kbd-lg
-                    ">▶︎</kbd>
+                    <kbd class="kbd kbd-md">◀︎</kbd>
+                    <kbd class="kbd kbd-md">▶︎</kbd>
                 </span>
             </h1>
             
@@ -31,7 +30,7 @@
                     md:max-w-xl
                     lg:max-w-2xl
                     xl:max-w-3xl
-                    2xl:max-w-4xl
+                    
                     ">
                     <div>
                         @if (project.title === "Asteroids") {
@@ -39,14 +38,12 @@
                                 md:h-72
                                 lg:h-96
                                 xl:h-[28rem]
-                                2xl:h-[32rem]
                             ">
                         } @else {
                             <img src="{{ project.imgURL }}" alt="..." class="w-full h-64 
                                 md:h-72
                                 lg:h-96
                                 xl:h-[28rem]
-                                2xl:h-[32rem]
                             ">
                         }
                     </div>
