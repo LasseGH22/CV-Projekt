@@ -1,35 +1,50 @@
-<div id="about" class="font-[abel] w-full h-fit flex flex-col justify-center items-center">
-    <div class="text-center flex justify-center space-x-6 text-3xl">
+<div class="font-[abel] w-full h-fit flex flex-col justify-center items-center relative">
+    <div id="about" class="absolute -top-20"></div>
+    <div class="text-center flex justify-center space-x-6 mb-2 text-3xl
+        xl:text-4xl
+    ">
         <p>M Y</p> 
         <p>S O F T W A R E</p>
         <p>J O U R N E Y</p>
     </div>
-    <div class="w-[90%]">
-        <ul class="timeline timeline-snap-icon timeline-vertical">
+    <div class="w-[85%]
+        2xl:w-[60%]
+    ">
+        <ul class="timeline timeline-snap-icon timeline-vertical mb-16">
             @for (entry of TimelineEntries; track $index) {
                 <li>
                     @if (entry.index > 0) {
                         <hr>
                     }
-                    <div class="timeline-middle bg-slate-400 w-4 h-4 rounded-full @if"></div>
+                    <div class="timeline-middle bg-slate-400 w-4 h-4 rounded-full
+                        lg:w-6 lg:h-6
+                    "></div>
                     
                     @if (entry.index % 2 === 0) {
-                        <div class="timeline-start text-end"> 
+                        <div class="timeline-start text-end mb-4"> 
                             <div class="flex space-x-3 justify-end">
                                 @for (title of entry.title; track $index) {
-                                    <p>{{ title }}</p>
+                                    <p class="text-lg
+                                        lg:text-xl
+                                    ">{{ title }}</p>
                                 }
                             </div>
-                            <p class="text-justify"> {{ entry.description }}</p>
+                            <p class="text-justify text-base
+                                lg:text-lg
+                            "> {{ entry.description }}</p>
                         </div>
                     } @else {
-                        <div class="timeline-end"> 
+                        <div class="timeline-end mb-4"> 
                             <div class="flex space-x-3">
                                 @for (title of entry.title; track $index) {
-                                    <p>{{ title }}</p>
+                                    <p class="text-lg
+                                        lg:text-xl
+                                    ">{{ title }}</p>
                                 }
                             </div>
-                            <p class="text-justify"> {{ entry.description }}</p>
+                            <p class="text-justify text-base
+                                lg:text-lg
+                            "> {{ entry.description }}</p>
                         </div>
                     }
                     @if (entry.index < TimelineEntries.length - 1) {

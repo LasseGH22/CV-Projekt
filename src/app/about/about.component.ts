@@ -15,7 +15,7 @@ export class AboutComponent {
     {
       index: 0,
       title: ["E A R L Y", "D A Y S"],
-      description: "I have always been very interested in tech, especially computers. Computer games has therefore been a big part of my life and is still a great hobby of mine. Through the years of gaming the curiosity for how my favorite games are made has grown."
+      description: "I have always been very interested in tech, especially computers. Computer games has therefore been a big part of my life and is still a great hobby of mine. Through the years of gaming a curiosity for how my favorite games are made has grown."
     },
     {
       index: 1,
