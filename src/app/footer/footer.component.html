@@ -8,17 +8,20 @@
     <p>T O U C H !</p>
   </div>
   <footer class="navbar">
-      <div class="navbar-start flex flex-col space-y-3 items-center">
-        <h1 class="
-          lg:text-lg
-          2xl:text-2xl
-        ">E M A I L</h1>
-        <div class="h-12 flex flex-col justify-center">
-          <p class="text-base text-black bg-white rounded-full p-2
-            
+      <div class="navbar-start flex justify-center">
+        <div class="space-y-3 flex flex-col justify-center items-center">
+          <h1 class="
+            lg:text-lg
             2xl:text-2xl
-          ">Lassehvilsted&#64;gmail.com</p>
+          ">E M A I L</h1>
+          <div (click)="CopyToClipboard()" class="h-12 flex flex-col justify-center relative">
+            <p id="Email" class="text-base text-black bg-white rounded-full p-2
+              2xl:text-xl
+            ">Lassehvilsted&#64;gmail.com</p>
+            <app-custom-notification #customNotification></app-custom-notification>
+          </div>
         </div>
+        
       </div>
       <div class="navbar-center flex flex-col space-y-3 items-center">
         <h1 class="
@@ -26,7 +29,7 @@
           2xl:text-2xl
         ">G I T H U B</h1>
         <a href="https://github.com/LasseGH22" target="_blank">
-          <div class="w-12 h-12 rounded-full bg-white p-1 flex justify-center items-center
+          <div class="w-12 h-12 rounded-full bg-white p-1 flex justify-center items-center hover:scale-110 transition-transform
             xl:w-14 xl:h-14
             2xl:w-16 2xl:h-16
           ">
@@ -40,7 +43,7 @@
           2xl:text-2xl
         ">L I N K E D - I N</h1>
         <a href="https://www.linkedin.com/in/lasse-hvilsted-7b4430152/" target="_blank">
-          <div class="w-12 h-12 rounded-full bg-white p-1 flex justify-center items-center
+          <div class="w-12 h-12 rounded-full bg-white p-1 flex justify-center items-center hover:scale-110 transition-transform
             xl:w-14 xl:h-14
             2xl:w-16 2xl:h-16
           ">

@@ -1,0 +1,17 @@
+@if (visible) {
+    <div class="absolute inset-0 flex items-center justify-center ">
+        @if (sucess) {
+            <div class="w-full bg-slate-600 py-1 mx-1 text-green-500 rounded-full text-center
+                2xl:text-xl
+            ">
+                {{ message }}
+            </div>
+        } @else {
+            <div class="bg-slate-600 py-1 px-2 text-red-500 rounded-full text-center
+                2xl:text-xl
+            ">
+                {{ message }}
+            </div>
+        }
+    </div>
+}
