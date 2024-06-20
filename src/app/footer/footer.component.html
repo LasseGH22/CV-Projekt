@@ -14,8 +14,8 @@
             lg:text-lg
             2xl:text-2xl
           ">E M A I L</h1>
-          <div (click)="CopyToClipboard()" class="h-12 flex flex-col justify-center relative">
-            <p id="Email" class="text-base text-black bg-white rounded-full p-2
+          <div (click)="CopyToClipboard()" (mouseenter)="onHover()" (mouseleave)="offHover()" class="group h-12 flex flex-col justify-center relative select-none">
+            <p id="Email" class="text-base text-black bg-white rounded-full p-2 
               2xl:text-xl
             ">Lassehvilsted&#64;gmail.com</p>
             <app-custom-notification #customNotification></app-custom-notification>
@@ -55,3 +55,7 @@
       </div>
   </footer>
 </div>
+
+<style>
+  
+</style>

@@ -34,4 +34,14 @@ export class FooterComponent {
     }
   }
 
+  onHover(): void {
+    const emailElement = document.getElementById('Email');
+    emailElement?.classList.add('text-blue-500', 'underline');
+  }
+  
+  offHover(): void {
+    const emailElement = document.getElementById('Email');
+    emailElement?.classList.remove('text-blue-500', 'underline');
+  }
+
 }
