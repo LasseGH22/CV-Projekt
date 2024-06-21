@@ -25,7 +25,7 @@ export class AboutComponent {
     {
       index: 2,
       title: ["H I G H", "S C H O O L"],
-      description: "Once finished with Primary School choosing the specialization of my High School degree was at that point an easy task. I chose to study a Higher Technical Exam (HTX) with a specialization of Programming and Communication-and-It. I was taught the fundamentals of object oriented programming in C# and i also did some Arduino programming and the needed electronics."
+      description: "Once finished with Primary School choosing the specialization of my High School degree was at that point an easy task. I chose to study a Higher Technical Exam (HTX) with a specialization of Programming and Communication-and-It. I was taught the fundamentals of object oriented programming in C# and i also did some Arduino programming and the needed electronics work."
     },
     {
       index: 3,

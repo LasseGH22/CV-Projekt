@@ -5,11 +5,12 @@ import { IntroComponent } from './intro/intro.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { FooterComponent } from './footer/footer.component';
 import { AboutComponent } from './about/about.component';
+import { TechnologiesComponent } from './technologies/technologies.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, NavbarComponent, IntroComponent, ProjectsComponent, FooterComponent, AboutComponent],
+  imports: [RouterOutlet, NavbarComponent, IntroComponent, ProjectsComponent, FooterComponent, AboutComponent, TechnologiesComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

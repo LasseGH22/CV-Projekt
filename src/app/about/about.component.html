@@ -21,7 +21,7 @@
                     "></div>
                     
                     @if (entry.index % 2 === 0) {
-                        <div class="timeline-start text-end mb-4"> 
+                        <div class="timeline-start text-end mb-4 mr-4"> 
                             <div class="flex space-x-3 justify-end">
                                 @for (title of entry.title; track $index) {
                                     <p class="text-lg
@@ -34,7 +34,7 @@
                             "> {{ entry.description }}</p>
                         </div>
                     } @else {
-                        <div class="timeline-end mb-4"> 
+                        <div class="timeline-end mb-4 ml-4"> 
                             <div class="flex space-x-3">
                                 @for (title of entry.title; track $index) {
                                     <p class="text-lg
