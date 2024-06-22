@@ -1,6 +1,6 @@
 <div class="font-[abel] w-full h-fit flex flex-col justify-center items-center relative">
     <div id="about" class="absolute -top-20"></div>
-    <div class="text-center flex justify-center space-x-6 mb-2 text-3xl
+    <div class="text-center flex flex-wrap justify-center gap-x-6 mb-2 text-3xl
         xl:text-4xl
     ">
         <p>M Y</p> 
@@ -10,7 +10,7 @@
     <div class="w-[85%]
         2xl:w-[60%]
     ">
-        <ul class="timeline timeline-snap-icon timeline-vertical mb-10">
+        <ul class="timeline timeline-compact timeline-snap-icon timeline-vertical mb-10">
             @for (entry of TimelineEntries; track $index) {
                 <li>
                     @if (entry.index > 0) {
@@ -21,8 +21,10 @@
                     "></div>
                     
                     @if (entry.index % 2 === 0) {
-                        <div class="timeline-start text-end mb-4 mr-4"> 
-                            <div class="flex space-x-3 justify-end">
+                        <div class="timeline-end mb-4 ml-4
+                            sm:timeline-start sm:text-end sm:mr-4
+                        "> 
+                            <div class="flex space-x-3 sm:justify-end">
                                 @for (title of entry.title; track $index) {
                                     <p class="text-lg
                                         lg:text-xl
