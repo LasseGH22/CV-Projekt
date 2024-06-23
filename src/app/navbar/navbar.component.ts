@@ -9,6 +9,10 @@ import { Component } from '@angular/core';
 })
 export class NavbarComponent {
   scrollToElement(id: string): void {
-    document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
+    if (id === "about") {
+      document.getElementById("about")?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    } else {
+      document.getElementById(id)?.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
   }
 }

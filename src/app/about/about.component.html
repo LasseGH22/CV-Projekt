@@ -10,7 +10,9 @@
     <div class="w-[85%]
         2xl:w-[60%]
     ">
-        <ul class="timeline timeline-compact timeline-snap-icon timeline-vertical mb-10">
+        <ul class="timeline timeline-snap-icon timeline-vertical mb-10
+            max-sm:timeline-compact 
+        ">
             @for (entry of TimelineEntries; track $index) {
                 <li>
                     @if (entry.index > 0) {

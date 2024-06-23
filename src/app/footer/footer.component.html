@@ -8,19 +8,19 @@
     <p>T O U C H !</p>
   </div>
   <footer class="navbar">
-      <div class="navbar-start flex justify-center">
-        <div class="space-y-3 flex flex-col justify-center items-center">
+      <div class="navbar-start flex flex-col space-y-3 items-center">
           <h1 class="
             lg:text-lg
             2xl:text-2xl
           ">E M A I L</h1>
-          <div (click)="CopyToClipboard()" (mouseenter)="onHover()" (mouseleave)="offHover()" class="group h-12 flex flex-col justify-center relative select-none">
-            <p id="Email" class="text-base text-black bg-white rounded-full p-2 
-              2xl:text-xl
-            ">Lassehvilsted&#64;gmail.com</p>
-            <app-custom-notification #customNotification></app-custom-notification>
-          </div>
-        </div>
+          <a href="mailto:lassehvilsted@gmail.com" target="_blank">
+            <div class="w-12 h-12 rounded-full bg-white p-1 flex justify-center items-center hover:scale-110 transition-transform
+              xl:w-14 xl:h-14
+              2xl:w-16 2xl:h-16
+            ">
+              <img src="assets/mail.svg" alt="Github" class="w-8 h-fit">
+            </div>
+          </a>
         
       </div>
       <div class="navbar-center flex flex-col space-y-3 items-center">
