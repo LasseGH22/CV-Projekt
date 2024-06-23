@@ -1,17 +1,23 @@
-<section class="flex flex-col space-y-4 h-fit w-full">
+<section class="flex flex-col space-y-4 h-fit w-full
+    md:space-y-8
+">
     <div class="flex justify-center items-center">
         <h1 class="text-2xl text-center
             sm:text-3xl
+            lg:text-5xl
         ">Explored Languages, Tools, and Frameworks</h1>
     </div>
     <section class="flex flex-col justify-center items-center space-y-6">
         <div class="flex flex-wrap justify-center items-center gap-x-4 gap-y-3
             sm:gap-x-8
+            md:gap-x-12
         ">
             @for (language of languages; track $index) {
                 <div>
                     <img src="{{ language.iconURL }}" alt="{{ language.altText }}" title="{{ language.name }}" class="w-fit h-12
                         sm:h-14
+                        md:h-16
+                        lg:h-20
                     ">
                 </div>
             }
@@ -21,20 +27,27 @@
         "></div>
         <div class="flex justify-center gap-x-4
             sm:gap-x-8
+            md:gap-x-12
         ">
             @for (tool of tools; track $index) {
                 <div>
                     <img src="{{ tool.iconURL }}" alt="{{ tool.altText }}" title="{{ tool.name }}" class="w-fit h-12
                         sm:h-14
+                        md:h-16
+                        lg:h-20
                     ">
                 </div>
             }
         </div>
         <div class="divider divider-vertical divider-neutral w-[80%] self-auto"></div>
-        <div class="flex flex-wrap justify-center items-center gap-x-6 gap-y-3">
+        <div class="flex flex-wrap justify-center items-center gap-x-6 gap-y-3
+            lg:gap-x-16 
+        ">
             @for (framework of frameworks; track $index) {
                 <div class="flex justify-center items-center w-40 h-14
                     sm:w-44 sm:h-16
+                    md:w-48 md:h-20
+                    lg:w-56 lg:h-24
                 ">
                     @if (framework.name !== "javaSpring") {
                         <img src="{{ framework.iconURL }}" alt="{{ framework.altText }}" title="{{ framework.name }}" class="w-full h-full object-cover">

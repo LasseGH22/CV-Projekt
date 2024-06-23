@@ -1,16 +1,21 @@
 <div id="projects" class="font-[abel] w-full h-screen flex flex-col justify-center items-center relative 
     
 ">
-    <div class="flex items-center space-x-6
-        sm:mb-2
-    ">
-        <kbd class="kbd kbd-sm h-fit">◀︎</kbd>
+    <div class="flex items-center space-x-6">
+        <kbd class="kbd kbd-sm h-fit
+            md:kbd-md
+            lg:kbd-lg
+        ">◀︎</kbd>
         <h1 class="flex justify-center text-3xl
             sm:text-4xl
+            lg:text-5xl
         ">P R O J E C T S</h1>
-        <kbd class="kbd kbd-sm h-fit">▶︎</kbd>
+        <kbd class="kbd kbd-sm h-fit
+            md:kbd-md
+            lg:kbd-lg
+        ">▶︎</kbd>
     </div>
-    <div  class="flex flex-col items-center space-y-2 bg-gradient-to-r h-3/5 w-full text-center
+    <div class="flex flex-col items-center space-y-2 bg-gradient-to-r h-fit w-full text-center
         sm:justify-center sm:from-slate-200 sm:via-white sm:to-slate-200 sm:rounded-2xl sm:shadow-xl sm:w-[95%] 
         
     ">
@@ -19,62 +24,96 @@
         ">
             @for (project of projects; track $index) {
                 <div class="carousel-item flex flex-col mx-48 items-center w-full bg-neutral-50 rounded-lg shadow-lg
-                sm:max-w-[34rem]
+                    sm:max-w-[34rem]
+                    lg:max-w-4xl lg:my-4
                 ">
                     <div class="h-fit w-full">
                         <img src="{{ project.imgURL }}" alt="..." class="object-cover rounded-t-lg">
                     </div>
                     <div class="w-full h-full flex flex-col justify-between">
                         <div class="relative">
-                            <div class="flex flex-col space-y-2 mx-4">
-                                <h1 class="text-lg font-bold">{{ project.title }}</h1>
-                                <p class="text-base">{{ project.description }}</p>
+                            <div class="flex flex-col mx-4
+                                max-md:space-y-2
+                                md:mx-2
+                            ">
+                                <h1 class="text-lg font-bold
+                                    md:text-xl
+                                    lg:text-3xl
+                                ">{{ project.title }}</h1>
+                                <p class="text-base
+                                    md:text-lg
+                                    lg:text-2xl
+                                ">{{ project.description }}</p>
                             </div>
                             <div class="absolute flex w-fit top-1 ml-1 space-x-2">
                                 @for (referral of project.referrals; track $index) {
                                     <a href="{{ referral.redirectURL }}" target="_blank">
-                                        <img src="{{ referral.imgURL }}" alt="" class="h-6 w-6">
+                                        <img src="{{ referral.imgURL }}" alt="" class="h-6 w-6
+                                            lg:h-8 lg:w-8
+                                        ">
                                     </a>
                                 }
                             </div>
                         </div>
         
-                        <div class="py-3 max-w-full">
-                            <button class="btn btn-sm text-lg w-[50%] shadow-md bg-slate-50" (click)= "openModal(project.index)">View More</button>
+                        <div class="py-3 max-w-full 
+                            md:pb-5 
+                        ">
+                            <button class="btn btn-sm text-lg w-[50%] shadow-md bg-slate-100 border-black
+                                md:text-xl
+                                lg:text-2xl
+                            " (click)= "openModal(project.index)">View More</button>
                         </div>
                     </div>
                 </div>
 
                 <dialog id="modal_{{ project.index }}" class="modal">
-                    <div class="modal-box px-4">
+                    <div class="modal-box px-4 
+                        lg:px-6 lg:max-w-2xl
+                    ">
                         <form method="dialog">
                             <button class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
                         </form>
-                        <div class="grid grid-cols-3 gap-4 py-2">
+                        <div class="grid grid-cols-3 gap-4 py-2
+                            lg:gap-6
+                        ">
                             <div class="col-span-2">
-                                <p class="text-justify">{{ project.longDescription }}</p>
+                                <p class="text-justify text-base
+                                    md:text-lg
+                                    lg:text-2xl
+                                ">{{ project.longDescription }}</p>
                             </div>
-                            <div class="text-start space-y-2">
+                            <div class="text-start space-y-2 text-base
+                                lg:text-2xl
+                            ">
                                 <div>
-                                    <p class="font-semibold">Origin</p>
+                                    <p class="font-semibold text-base
+                                        lg:text-2xl
+                                    ">Origin</p>
                                     <p>{{ project.origin.origin }}</p>
                                 </div>
 
                                 @if (project.origin.accomplishment) {
                                     <div>
-                                        <p class="font-semibold">Accomplishment</p>
+                                        <p class="font-semibold text-base
+                                            lg:text-2xl
+                                        ">Accomplishment</p>
                                         <p>{{ project.origin.accomplishment }}</p>
                                     </div>
                                 }
                                 
                                 @if (project.origin.origin === "University") {
                                     <div>
-                                        <p class="font-semibold">Subject</p>
+                                        <p class="font-semibold text-base
+                                            lg:text-2xl
+                                        ">Subject</p>
                                         <p>{{ project.origin.subject }}</p>
                                     </div>
                                     
                                     <div>
-                                        <p class="font-semibold">Grade</p>
+                                        <p class="font-semibold text-base
+                                            lg:text-2xl
+                                        ">Grade</p>
                                         <p>{{ project.origin.grade }}</p>
                                     </div>
                                 }
@@ -82,12 +121,15 @@
                         </div>
                         
                         <div>
-                            <h1 class="font-style: italic font-semibold">Technologies</h1>
-                            <div class="flex justify-center pb-4 pt-2 space-x-2 items-end">
+                            <h1 class="font-style: italic font-semibold
+                                lg:text-2xl
+                            ">Technologies</h1>
+                            <div class="flex justify-center space-x-2 items-end">
                                 @for (tech of project.technologies; track $index) {
-                                    <div class="tooltip tooltip-bottom custom-tooltip" [attr.data-tip]="tech.altText">
-                                        <img src="{{ tech.iconURL }}" alt="" class="w-fit h-9 hover:scale-125 transition-transform">
-                                    </div>
+                                    <img src="{{ tech.iconURL }}" alt="" title="{{ tech.altText }}" class="w-fit hover:scale-125 transition-transform h-9
+                                            md:h-10
+                                            lg:h-14
+                                        ">
                                 }
                             </div>
                         </div>
