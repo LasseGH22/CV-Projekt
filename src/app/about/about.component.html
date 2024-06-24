@@ -2,7 +2,7 @@
     <div id="about" class="absolute -top-20"></div>
     <div class="text-center flex flex-wrap justify-center gap-x-6 mb-2 text-3xl
         sm:text-4xl
-        lg:text-5xl lg:gap-x-8
+        xl:text-5xl
     ">
         <p>M Y</p> 
         <p>S O F T W A R E</p>
@@ -10,6 +10,7 @@
     </div>
     <div class="w-[85%]
         md:w-[90%]
+        lg:w-[85%]
         2xl:w-[60%]
     ">
         <ul class="timeline timeline-snap-icon timeline-vertical mb-10
@@ -22,7 +23,7 @@
                     }
                     <div class="timeline-middle bg-slate-400 w-4 h-4 rounded-full
                         md:w-5 md:h-5
-                        lg:w-7 lg:h-7
+                        xl:w-6 xl:h-6
                     "></div>
                     
                     @if (entry.index % 2 === 0) {
@@ -35,13 +36,13 @@
                                     <p class="text-lg
                                         sm:text-xl
                                         md:text-2xl
-                                        lg:text-3xl
+                                        xl:text-3xl
                                     ">{{ title }}</p>
                                 }
                             </div>
                             <p class="text-justify text-base
                                 md:text-lg
-                                lg:text-[1.5rem]
+                                xl:text-2xl
                             "> {{ entry.description }}</p>
                         </div>
                     } @else {
@@ -53,13 +54,13 @@
                                     <p class="text-lg
                                         sm:text-xl
                                         md:text-2xl
-                                        lg:text-3xl
+                                        xl:text-3xl
                                     ">{{ title }}</p>
                                 }
                             </div>
                             <p class="text-justify text-base
                                 md:text-lg
-                                lg:text-[1.5rem]
+                                xl:text-2xl
                             "> {{ entry.description }}</p>
                         </div>
                     }

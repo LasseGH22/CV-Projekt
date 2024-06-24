@@ -4,15 +4,15 @@
     <div class="flex items-center space-x-6">
         <kbd class="kbd kbd-sm h-fit
             md:kbd-md
-            lg:kbd-lg
+            xl:kbd-lg
         ">◀︎</kbd>
         <h1 class="flex justify-center text-3xl
             sm:text-4xl
-            lg:text-5xl
+            xl:text-5xl
         ">P R O J E C T S</h1>
         <kbd class="kbd kbd-sm h-fit
             md:kbd-md
-            lg:kbd-lg
+            xl:kbd-lg
         ">▶︎</kbd>
     </div>
     <div class="flex flex-col items-center space-y-2 bg-gradient-to-r h-fit w-full text-center
@@ -25,7 +25,8 @@
             @for (project of projects; track $index) {
                 <div class="carousel-item flex flex-col mx-48 items-center w-full bg-neutral-50 rounded-lg shadow-lg
                     sm:max-w-[34rem]
-                    lg:max-w-4xl lg:my-4
+                    lg:max-w-2xl lg:my-4
+                    xl:max-w-4xl
                 ">
                     <div class="h-fit w-full">
                         <img src="{{ project.imgURL }}" alt="..." class="object-cover rounded-t-lg">
@@ -38,18 +39,19 @@
                             ">
                                 <h1 class="text-lg font-bold
                                     md:text-xl
-                                    lg:text-3xl
+                                    xl:text-3xl
                                 ">{{ project.title }}</h1>
                                 <p class="text-base
                                     md:text-lg
-                                    lg:text-2xl
+                                    xl:text-2xl
                                 ">{{ project.description }}</p>
                             </div>
                             <div class="absolute flex w-fit top-1 ml-1 space-x-2">
                                 @for (referral of project.referrals; track $index) {
                                     <a href="{{ referral.redirectURL }}" target="_blank">
                                         <img src="{{ referral.imgURL }}" alt="" class="h-6 w-6
-                                            lg:h-8 lg:w-8
+                                            lg:h-7 lg:w-7
+                                            xl:h-9 xl:w-9
                                         ">
                                     </a>
                                 }
@@ -60,8 +62,8 @@
                             md:pb-5 
                         ">
                             <button class="btn btn-sm text-lg w-[50%] shadow-md bg-slate-100 border-black
-                                md:text-xl
-                                lg:text-2xl
+                                md:text-lg
+                                xl:text-2xl
                             " (click)= "openModal(project.index)">View More</button>
                         </div>
                     </div>
@@ -69,26 +71,29 @@
 
                 <dialog id="modal_{{ project.index }}" class="modal">
                     <div class="modal-box px-4 
-                        lg:px-6 lg:max-w-2xl
+                        lg:px-6 lg:max-w-xl
                     ">
                         <form method="dialog">
                             <button class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
                         </form>
                         <div class="grid grid-cols-3 gap-4 py-2
-                            lg:gap-6
+                            
                         ">
                             <div class="col-span-2">
                                 <p class="text-justify text-base
                                     md:text-lg
-                                    lg:text-2xl
+                                    lg:text-xl
+                                    xl:text-2xl
                                 ">{{ project.longDescription }}</p>
                             </div>
                             <div class="text-start space-y-2 text-base
-                                lg:text-2xl
+                                lg:text-xl
+                                xl:text-2xl
                             ">
                                 <div>
                                     <p class="font-semibold text-base
-                                        lg:text-2xl
+                                        lg:text-xl
+                                        xl:text-2xl
                                     ">Origin</p>
                                     <p>{{ project.origin.origin }}</p>
                                 </div>
@@ -96,7 +101,8 @@
                                 @if (project.origin.accomplishment) {
                                     <div>
                                         <p class="font-semibold text-base
-                                            lg:text-2xl
+                                            lg:text-xl
+                                            xl:text-2xl
                                         ">Accomplishment</p>
                                         <p>{{ project.origin.accomplishment }}</p>
                                     </div>
@@ -105,14 +111,16 @@
                                 @if (project.origin.origin === "University") {
                                     <div>
                                         <p class="font-semibold text-base
-                                            lg:text-2xl
+                                            lg:text-xl
+                                            xl:text-2xl
                                         ">Subject</p>
                                         <p>{{ project.origin.subject }}</p>
                                     </div>
                                     
                                     <div>
                                         <p class="font-semibold text-base
-                                            lg:text-2xl
+                                            lg:text-xl
+                                            xl:text-2xl
                                         ">Grade</p>
                                         <p>{{ project.origin.grade }}</p>
                                     </div>
@@ -122,13 +130,13 @@
                         
                         <div>
                             <h1 class="font-style: italic font-semibold
-                                lg:text-2xl
+                                lg:text-xl
                             ">Technologies</h1>
                             <div class="flex justify-center space-x-2 items-end">
                                 @for (tech of project.technologies; track $index) {
                                     <img src="{{ tech.iconURL }}" alt="" title="{{ tech.altText }}" class="w-fit hover:scale-125 transition-transform h-9
                                             md:h-10
-                                            lg:h-14
+                                            xl:h-14
                                         ">
                                 }
                             </div>
