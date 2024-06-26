@@ -1,6 +1,6 @@
 <section class="flex flex-col space-y-4 h-fit w-full font-[abel]
     md:space-y-8
-    xl:mb-32
+    
 ">
     <div class="flex justify-center items-center
         xl:mb-2
@@ -19,7 +19,7 @@
         ">
             @for (language of languages; track $index) {
                 <div>
-                    <img src="{{ language.iconURL }}" alt="{{ language.altText }}" title="{{ language.name }}" class="w-fit h-12
+                    <img src="{{ language.iconURL }}" alt="{{ language.altText }}" title="{{ language.name }}" class="w-fit h-12 hover:scale-110 
                         sm:h-14
                         md:h-16
                     ">
@@ -36,7 +36,7 @@
         ">
             @for (tool of tools; track $index) {
                 <div>
-                    <img src="{{ tool.iconURL }}" alt="{{ tool.altText }}" title="{{ tool.name }}" class="w-fit h-12
+                    <img src="{{ tool.iconURL }}" alt="{{ tool.altText }}" title="{{ tool.name }}" class="w-fit h-12 hover:scale-110
                         sm:h-14
                         md:h-16
                     ">
@@ -51,14 +51,14 @@
             xl:gap-x-20 xl:w-[50%] xl:gap-y-6
         ">
             @for (framework of frameworks; track $index) {
-                <div class="flex justify-center items-center w-40 h-14
+                <div class="flex justify-center items-center w-40 h-14 
                     sm:w-44 sm:h-16
                     md:w-48 md:h-20
                 ">
                     @if (framework.name !== "javaSpring") {
-                        <img src="{{ framework.iconURL }}" alt="{{ framework.altText }}" title="{{ framework.name }}" class="w-full h-full object-cover">
+                        <img src="{{ framework.iconURL }}" alt="{{ framework.altText }}" title="{{ framework.name }}" class="w-full h-full object-cover hover:scale-110">
                     } @else {
-                        <img src="{{ framework.iconURL }}" alt="{{ framework.altText }}" title="{{ framework.name }}" class="w-full h-full object-fit">
+                        <img src="{{ framework.iconURL }}" alt="{{ framework.altText }}" title="{{ framework.name }}" class="w-full h-full object-fit hover:scale-110">
                     }
                 </div>
             }
