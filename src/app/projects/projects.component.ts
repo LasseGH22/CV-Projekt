@@ -14,6 +14,7 @@ export class ProjectsComponent implements OnInit {
 
   public technologies: Technologies[] = [];
   public projects: Projects[] = [];
+  currentItemIndex: number = 0;
   
   constructor(private technologiesService: TechnologiesService) { }
 
@@ -29,6 +30,23 @@ export class ProjectsComponent implements OnInit {
     }
   }
   
+  scrollToItem(itemId: string): void {
+    const itemElement = document.getElementById(itemId);
+    if (itemElement) {
+      itemElement.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'start' });
+    }
+  }
+
+  navigate(direction: 'next' | 'prev'): void {
+    const totalItems = this.projects.length;
+    if (direction === 'next') {
+      this.currentItemIndex = (this.currentItemIndex + 1) % totalItems;
+    } else {
+      this.currentItemIndex = (this.currentItemIndex - 1 + totalItems) % totalItems;
+    }
+    this.scrollToItem(`carouselItem-${this.currentItemIndex}`);
+  }
+
   initProjects(): void {
     this.projects = [
       {
