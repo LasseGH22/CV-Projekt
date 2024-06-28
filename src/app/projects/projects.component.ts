@@ -36,7 +36,7 @@ export class ProjectsComponent implements OnInit {
         title: "Flipside Factories", 
         imgURL: "assets/FlipsideFactories.png", 
         description: "Winner of a 24 hour Game Jam hosted by SDU's association for software students, Enigma.", 
-        longDescription: "The game is a top down factory builder with its twist being spatial anomalies. The objective is to craft certain items in order to unlock new levels and eventually escape. The player has to utilize the spatial anomalies to move materials around.", 
+        longDescription: "The game is a top down factory builder with its twist being spatial anomalies. The objective is to craft certain items in order to unlock new levels and eventually escape. The player has to utilize spatial anomalies to move materials between dimensions.", 
         technologies: [
           this.technologies[1],
           this.technologies[11],
@@ -46,14 +46,14 @@ export class ProjectsComponent implements OnInit {
           {name: "Github", imgURL: this.technologies[15].iconURL, redirectURL: "https://github.com/VinciDa33/Enigma-Game-Jam"},
           {name: "Itch-Io", imgURL: this.technologies[16].iconURL, redirectURL: "https://vincida.itch.io/flipside-factories"}
         ],
-        origin: { origin: "Enigma Game Jam", accomplishment: "winner" }
+        origin: { origin: "Enigma Game Jam", accomplishment: "Winner" }
       },
       {
         index: 1,
         title: "Clicker Game", 
         imgURL: "assets/ClickerGame.png", 
-        description: "A simple incremental clicker game.", 
-        longDescription: "This game was my first look at the unity game engine as well as my first look at C# with new found knowledge from my degree. The game is a simple clicker game where the player has to click to gain points to buy generators and upgrades to gain points faster.", 
+        description: "A very simple incremental clicker game.", 
+        longDescription: "This game marked my initial experience with the Unity game engine and my first 'real' exposure to C# programming. The game is a basic incremental clicker game where players earn points by clicking, which they can then use to purchase generators and upgrades to accelerate their point accumulation.", 
         technologies: [
           this.technologies[1],
           this.technologies[11]
@@ -68,7 +68,7 @@ export class ProjectsComponent implements OnInit {
         title: "Asteroids", 
         imgURL: "assets/Asteroids.png", 
         description: "A component-based game of Asteroids using JPMS.", 
-        longDescription: "This is a rendition of the classic arcade game, Asteroids. The game is built using Java and JavaFX with a component-based architecture. The game is built using Java Platform Module System (JPMS) to modularize the game and it utilizes springs functionality to act microservice to track score.", 
+        longDescription: "This project is a rendition of the classic arcade game of Asteroids, but with a component-based architecture achieved by utilizing JPMS. The game is built using JavaFX for the UI and Java for the backend. The Spring framework is used in addition to build and run microservices for the game.", 
         technologies: [
           this.technologies[0],
           this.technologies[7],
@@ -78,7 +78,7 @@ export class ProjectsComponent implements OnInit {
         referrals: [
           {name: "Github", imgURL: this.technologies[15].iconURL, redirectURL: "https://github.com/LasseGH22/AsteroidsFX/tree/LasseMain"},
         ],
-        origin: { origin: "University", subject: "Component-based Software Engineering", grade: "Ungraded"}
+        origin: { origin: "University", subject: "Component-based Software Engineering", grade: "7"}
       },
       {
         index: 3,
@@ -98,7 +98,7 @@ export class ProjectsComponent implements OnInit {
         referrals: [
           {name: "Github", imgURL: this.technologies[15].iconURL, redirectURL: "https://github.com/LasseGH22/ApiProject"},
         ],
-        origin: { origin: "University", subject: "Softwaretechnology in cyber-physical systems", grade: "Ungraded" }
+        origin: { origin: "University", subject: "Softwaretechnology in cyber-physical systems", grade: "7" }
       },
       {
         index: 4,
@@ -113,13 +113,14 @@ export class ProjectsComponent implements OnInit {
           this.technologies[6],
           this.technologies[8],
           this.technologies[9],
+          this.technologies[12],
           this.technologies[13],
           this.technologies[20]
         ], 
         referrals: [
           {name: "Github", imgURL: this.technologies[15].iconURL, redirectURL: "https://github.com/DroneDudes/SEMPRO4"},
         ],
-        origin: { origin: "University", subject: "4th. Semester Project", grade: "Ungraded" }
+        origin: { origin: "University", subject: "4th. Semester Project", grade: "12" }
       },
       {
         index: 5,
@@ -169,6 +170,8 @@ export class ProjectsComponent implements OnInit {
         description: "Shop module for a shared e-commerce platform.",
         longDescription: "???", 
         technologies: [
+          this.technologies[0],
+          this.technologies[7],
           this.technologies[20]
         ], 
         referrals: [
@@ -183,6 +186,8 @@ export class ProjectsComponent implements OnInit {
         description: "SEMPRO1",
         longDescription: "???", 
         technologies: [
+          this.technologies[0],
+          this.technologies[7],
           this.technologies[20]
         ], 
         referrals: [
