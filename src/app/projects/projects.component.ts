@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, HostListener } from '@angular/core';
 import { Projects } from '../models/project';
 import { Technologies } from '../models/technologies';
 import { TechnologiesService } from '../services/technologies.service';
@@ -21,6 +21,7 @@ export class ProjectsComponent implements OnInit {
   ngOnInit(): void {
     this.technologies = this.technologiesService.getTechnologies();
     this.initProjects();
+    window.addEventListener('keydown', this.handleKeyboardEvent.bind(this));
   }
 
   openModal(index: number): void {
@@ -44,7 +45,19 @@ export class ProjectsComponent implements OnInit {
     } else {
       this.currentItemIndex = (this.currentItemIndex - 1 + totalItems) % totalItems;
     }
-    this.scrollToItem(`carouselItem-${this.currentItemIndex}`);
+    const itemId = `carouselItem-${this.currentItemIndex}`;
+    console.log(`Scrolling to item with ID: ${itemId}`); // Debugging line
+    this.scrollToItem(itemId);
+  }
+
+  handleKeyboardEvent(event: KeyboardEvent): void {
+    event.preventDefault();
+    event.stopPropagation();
+    if (event.key === 'ArrowRight') {
+      this.navigate('next');
+    } else if (event.key === 'ArrowLeft') {
+      this.navigate('prev');
+    }
   }
 
   initProjects(): void {
