@@ -46,7 +46,6 @@ export class ProjectsComponent implements OnInit {
       this.currentItemIndex = (this.currentItemIndex - 1 + totalItems) % totalItems;
     }
     const itemId = `carouselItem-${this.currentItemIndex}`;
-    console.log(`Scrolling to item with ID: ${itemId}`); // Debugging line
     this.scrollToItem(itemId);
   }
 

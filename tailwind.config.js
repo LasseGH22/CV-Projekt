@@ -28,14 +28,14 @@ module.exports = {
   },
   plugins: [require("daisyui")],
   daisyui: {
-    themes: true,
+    themes: [
+      'light'
+    ],
     styled: true,
-    themes: true,
     base: true,
     utils: true,
     logs: true,
     rtl: false,
   },
-  darkMode: false,
 }
 
