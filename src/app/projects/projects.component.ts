@@ -66,7 +66,7 @@ export class ProjectsComponent implements OnInit {
         title: "Flipside Factories", 
         imgURL: "assets/FlipsideFactories.png", 
         description: "Winner of a 24 hour Game Jam hosted by SDU's association for software students, Enigma.", 
-        longDescription: "The game is a top down factory builder with its twist being spatial anomalies. The objective is to craft certain items in order to unlock new levels and eventually escape. The player has to utilize spatial anomalies to move materials between dimensions.", 
+        longDescription: "The game is a top-down factory builder with a unique twist involving spatial anomalies. The objective is to craft specific items to unlock new levels and ultimately escape. Players must leverage spatial anomalies to transport materials between dimensions.", 
         technologies: [
           this.technologies[1],
           this.technologies[11],
@@ -89,7 +89,7 @@ export class ProjectsComponent implements OnInit {
           this.technologies[11]
         ], 
         referrals: [
-          {name: "Github", imgURL: this.technologies[15].iconURL, redirectURL: ""},
+          
         ],
         origin: { origin: "Hobby Project"}
       },
@@ -115,7 +115,7 @@ export class ProjectsComponent implements OnInit {
         title: "Bitcoin Tracker", 
         imgURL: "assets/ApiProject.png", 
         description: "Full stack web application providing real-time and historical data on Bitcoin.",
-        longDescription: "Full stack web application for tracking bitcoin prices with a Java Spring Boot backend and vanilla HTML, CSS and JavaScript frontend. For data persistence an embedded H2 database using JDBC is implemented.", 
+        longDescription: "Full stack web application for tracking bitcoin prices with a Java Spring Boot backend and vanilla HTML, CSS, and JavaScript frontend. For data persistence an embedded H2 database using JDBC is implemented.", 
         technologies: [
           this.technologies[0],
           this.technologies[2],
@@ -135,7 +135,7 @@ export class ProjectsComponent implements OnInit {
         title: "Drone Dudes", 
         imgURL: "assets/SEMPRO4.png", 
         description: "Full-stack management of an assembly line with multiple communication protocols",
-        longDescription: "???", 
+        longDescription: "For our 4th Semester Project, my group and I were assigned to develop a management application for a virtual assembly line. This assembly line includes a Warehouse, AGV, and Assembly Station, each operating in its own Docker container. The Warehouse container communicates over SOAP, the AGV uses HTTP with REST, and the Assembly Station uses MQTT. The backend is constructed using the Spring framework, while the frontend is developed with Angular. An embedded H2 database is employed for data persistence.", 
         technologies: [
           this.technologies[0],
           this.technologies[2],
@@ -177,7 +177,7 @@ export class ProjectsComponent implements OnInit {
         title: "Beer Bros", 
         imgURL: "assets/SEMPRO3.png", 
         description: "Full-stack management application for a brewery.",
-        longDescription: "???", 
+        longDescription: "For our 3rd Semester Project, my group and I were assigned to develop an application for seamless integration with a brewery. The application is designed to execute specific commands and monitor processes through a user-friendly GUI. The backend is built in Java using the Spring framework, complemented by a fully vanilla frontend. A cloud-hosted PostgreSQL database on Supabase is utilized for data persistence.", 
         technologies: [
           this.technologies[0],
           this.technologies[2],
@@ -195,10 +195,10 @@ export class ProjectsComponent implements OnInit {
       },
       {
         index: 7,
-        title: "SEMPRO2", 
+        title: "Arne's Electronics Store", 
         imgURL: "assets/SEMPRO2.png", 
         description: "Shop module for a shared e-commerce platform.",
-        longDescription: "???", 
+        longDescription: "For this project, all groups were collectively tasked with creating a fully functional e-commerce platform. My group was responsible for developing the shop module. We built our shop module using plain Java for the backend and JavaFX for the frontend. The only successful integration between modules was our shop module and the PIM module.", 
         technologies: [
           this.technologies[0],
           this.technologies[7],
@@ -213,8 +213,8 @@ export class ProjectsComponent implements OnInit {
         index: 8,
         title: "Skipper Skrald", 
         imgURL: "assets/SEMPRO1.png", 
-        description: "SEMPRO1",
-        longDescription: "???", 
+        description: "Educational game teaching about marine pollution.",
+        longDescription: "Skipper Skrald is an educational game built around FN's Global Goals nr. 14, Life Below Water. The goal of the game is to educate people on the impacts of marine pollution. The game is built in plain Java with JavaFX as the frontend / GUI.", 
         technologies: [
           this.technologies[0],
           this.technologies[7],
