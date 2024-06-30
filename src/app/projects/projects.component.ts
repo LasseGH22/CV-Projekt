@@ -106,7 +106,7 @@ export class ProjectsComponent implements OnInit {
           this.technologies[20]
         ], 
         referrals: [
-          {name: "Github", imgURL: this.technologies[15].iconURL, redirectURL: "https://github.com/LasseGH22/AsteroidsFX/tree/LasseMain"},
+          {name: "Github", imgURL: this.technologies[15].iconURL, redirectURL: "https://github.com/LasseGH22/Asteroids-game"},
         ],
         origin: { origin: "University", subject: "Component-based Software Engineering", grade: "7"}
       },
@@ -115,7 +115,7 @@ export class ProjectsComponent implements OnInit {
         title: "Bitcoin Tracker", 
         imgURL: "assets/ApiProject.png", 
         description: "Full stack web application providing real-time and historical data on Bitcoin.",
-        longDescription: "Full stack web application for tracking bitcoin prices with a Java Spring Boot backend and vanilla HTML, CSS, and JavaScript frontend. For data persistence an embedded H2 database using JDBC is implemented.", 
+        longDescription: "Full stack web application for tracking bitcoin prices with a Java Spring Boot backend and vanilla HTML, CSS, and JavaScript frontend. Immediate data loading in the frontend is done via REST endpoints while real time updates uses a websocket connection.  For data persistence an embedded H2 database using JDBC is implemented.", 
         technologies: [
           this.technologies[0],
           this.technologies[2],
